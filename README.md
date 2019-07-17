@@ -1,2 +1,2 @@
-# KIDNEY_DISEASE_PREIDICTION
+# DIABETES_PREDICTION
 This is a recess data science project to predict Kidney disease trends
