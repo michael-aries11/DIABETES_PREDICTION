@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<hea data-validate="Enter the required data" >
+	<title>Diabetes Prevalence Predictor</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename = 'images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'vendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'vendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/main.css')}}">
+<!--===============================================================================================-->
+</hea data-validate="Enter the required data" >
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action = "http://localhost:9999/result" method = "POST">
+				<span class="contact100-form-title">
+					Predict Diabetes Prevalence
+				</span>
+				<label class="label-input100" >Fill in your Medical Data*</label>
+
+				<label class="label-input100" >Age *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="age" placeholder="Age in years">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" > Albumin*</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="al" placeholder="Albumin level - (0 ,1 ,2 ,3 ,4 ,5)">
+				</div>
+				<label class="label-input100" >Blood Sugar *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="su" placeholder="Blood Sugar level - (0 ,1 ,2 ,3 ,4 ,5)">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Red Blood Cell Count *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="rbc" placeholder="Red Blood Cell Count in millions/cmm">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Puss Cell *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="pc" placeholder="Present = 1, Notpresent = 0)">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Blood Glucose Random *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="bgr" placeholder=" Blood Glucose Random in mgs/dl">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >BLood Urea *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="bu" placeholder="Blood Urea in mgs/dl">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Hypertension *</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="htn" placeholder="Hypertension (Yes = 1, No = 0)">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Pedal Edema*</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="pe" placeholder=" Pedal Edema (Yes = 1, No = 0)	">
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" >Chronic Kidney Disease*</label>
+				<div class="wrap-input100 validate-input"  data-validate="Enter the required data" >
+					<input id="email" class="input100" type="number" name="class" placeholder=" (Yes = 1, No = 0)">
+					<span class="focus-input100"></span>
+				</div>
+			
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type="submit">
+						Submit for Prediction
+					</button>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('../static/images/bg-00.jpg');">
+							<div class="flex-w size1 p-b-47">
+								<div class="txt1 p-r-25">
+									<span class="lnr lnr-map-marker"></span>
+								</div>
+
+								<div class="flex-col size2">
+									<span class="txt1 p-b-20">
+										About System
+									</span>
+
+									<span class="txt2">
+										This system uses machine learning to predict Diabetes based on provided data. 
+									</span>
+								</div>
+							</div>
+
+							<div class="dis-flex size1 p-b-47">
+								<div class="txt1 p-r-25">
+									<span class="lnr lnr-phone-handset"></span>
+								</div>
+
+								<div class="flex-col size2">
+									<span class="txt1 p-b-20">
+										The Developers
+									</span>
+									
+									<span class="txt3">
+										Makerere University Bsc. Software Engineering Students Group 3, Year 2 Recess Project
+									</span>
+									<span class="txt2">
+										Michael Arikosi, Rovence Kabahinda, Mike Mwanje and Meleby Nyika
+									</span>
+									
+
+								</div>
+							</div>
+
+							</div>
+					</div>
+				</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename ='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename = 'vendor/animsition/js/animsition.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename ='vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{url_for('static', filename = 'vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename = 'vendor/select2/select2.min.js')}}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename = 'vendor/daterangepicker/moment.min.js')}}"></script>
+	<script src="{{url_for('static', filename = 'vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename = 'vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{url_for('static', filename = 'js/main.js')}}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>
